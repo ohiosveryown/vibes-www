@@ -1,0 +1,14 @@
+@import '~/static/style/grid.scss';
+
+@font-face {
+  font-family: "Blush";
+  src: url("../type/blush.woff2") format("woff2");
+  font-display: block;
+}
+
+.font-prim { font-family: 'Blush', var(--system-ui); }
+
+.bold { -webkit-text-stroke: .2px var(--gravity); }
+.uc { text-transform: uppercase; }
+.tac { text-align: center; }
+.tar { text-align: right; }
