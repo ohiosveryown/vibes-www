@@ -1,8 +1,9 @@
 <!-- layout -->
 <template>
   <main>
-    <h1 class="mb-4 font-prim">Hello World – with nuxt and gsap</h1>
-    <Article/>
+    <h1 class="anim--enter mb-4 font-prim">
+    Hello World – with nuxt and gsap</h1>
+    <Article class="anim--enter"/>
   </main>
 </template>
 
@@ -23,6 +24,16 @@
     head: () => ({
       title: 'home'
     }),
-    components: { Article, }
+    components: { Article, },
+    mounted() {
+      gsap.from('.anim--enter', {
+        opacity: 0,
+        y: 200,
+        skewY: 10,
+        stagger: .15,
+        duration: 1,
+        ease: Power4.easeInOut
+      })
+    }
   }
 </script>
