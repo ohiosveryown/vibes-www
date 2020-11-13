@@ -1,9 +1,9 @@
 <!-- layout -->
 <template>
   <main>
-    <h1 class="anim--enter mb-4 font-prim">
+    <h1 class="skw anim--enter mb-4 font-prim">
     Hello World – with nuxt and gsap</h1>
-    <Article class="anim--enter"/>
+    <Article class="skw anim--enter"/>
   </main>
 </template>
 
