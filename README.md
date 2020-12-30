@@ -1,3 +1,3 @@
-# proportional.design
+# nuxt-gsap-template
 
-> Proportional.design is a web presence for a studio building wood furniture and functional objects.
+> A boilerplate for nuxt and gsap based projects.
