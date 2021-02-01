@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-gsap-template",
+  "name": "vibes",
   "version": "1.0.0",
-  "description": "A boilerplate for nuxt and gsap created projects.",
+  "description": "Vibes connects your thoughts and ideas all in one place.",
   "author": "Matthew Pence",
   "private": true,
   "scripts": {
