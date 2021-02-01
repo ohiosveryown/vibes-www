@@ -1,3 +1,4 @@
-# nuxt-gsap-template
+# Vibes (www)
+> The web presence for Vibes – an app that connects your thoughts and ideas all in one place.
 
-> A boilerplate for nuxt and gsap based projects.
+![Vibes Marketing Site](https://res.cloudinary.com/da32ufmnf/image/upload/v1612194736/vibes-www/cover_snmq67.jpg)
