@@ -1,9 +1,10 @@
 <!-- layout -->
 <template>
   <header class="width">
-    <Icon class="mt-9 mb-7"/>
+    <Icon class="mt-7 mb-5"/>
     <h1 class="mb-2 font-prim">{{ header }}</h1>
-    <h2 class="font-body">{{ subhead }}</h2>
+    <h2 class="mb-5 font-body">{{ subhead }}</h2>
+    <Form/>
   </header>
 </template>
 
@@ -20,7 +21,9 @@
     h1 {
       font-size: 4rem;
       line-height: 1.2;
-      @include breakpoint(mdl) { font-size: 6.4rem; }
+      @include breakpoint(md) { font-size: 5vw; }
+      // @include breakpoint(mdl) { font-size: 6.4rem; }
+      // @include breakpoint(lg)  { font-size: 7rem; }
     }
     h2 {
       max-width: 56ch;
@@ -33,8 +36,9 @@
 <!-- logic -->
 <script>
   import Icon from '~/components/Icon'
+  import Form from '~/components/Form'
   export default {
-    components: { Icon, },
+    components: { Icon, Form },
     props: [ 'header', 'subhead' ],
   }
 </script>
