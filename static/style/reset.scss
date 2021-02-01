@@ -17,6 +17,7 @@
   --zmin: -9999;
 
   --gravity: #252424;
+  --cloud: #F3F6FE;
 }
 
 html {
@@ -29,7 +30,7 @@ html {
 }
 
 body {
-  background: #F3F6FE;
+  background: var(--cloud);
   color: var(--gravity);
   font: normal 1.8rem/1.4 var(--system-ui);
 }

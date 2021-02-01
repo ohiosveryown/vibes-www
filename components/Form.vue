@@ -2,7 +2,7 @@
 <template>
   <form
     name="contactus"
-    action="/"
+    action="/thanks"
     method="post"
     netlify
     netlify-honeypot="bot-field">
@@ -32,11 +32,16 @@
   @import '~/static/style/grid.scss';
   form {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    @include breakpoint(sm) { width: 38.6rem; }
+    @include breakpoint(sm) {
+       flex-direction: row;
+       width: 38.6rem; 
+    }
   }
   
   input, button {
+    margin-bottom: 1.6rem; 
     padding: 1.4rem 2.4rem 1.8rem;
     font-size: 1.4rem;
   }

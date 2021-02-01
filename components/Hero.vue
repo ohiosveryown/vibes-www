@@ -2,9 +2,9 @@
 <template>
   <header class="width">
     <Icon class="mt-7 mb-5"/>
-    <h1 class="mb-2 font-prim">{{ header }}</h1>
-    <h2 class="mb-5 font-body">{{ subhead }}</h2>
-    <Form/>
+    <h1 class="enter mb-2 font-prim">{{ header }}</h1>
+    <h2 class="enter mb-5 font-body">{{ subhead }}</h2>
+    <Form class="enter"/>
   </header>
 </template>
 
@@ -40,5 +40,14 @@
   export default {
     components: { Icon, Form },
     props: [ 'header', 'subhead' ],
+    
+    mounted() {
+      // gsap.from('.enter', {
+      //   opacity: 0,
+      //   duration: 3,
+      //   delay: .3,
+      //   ease: "elastic.out(1,.5)"
+      // })
+    }
   }
 </script>
