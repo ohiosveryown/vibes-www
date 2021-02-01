@@ -1,61 +1,55 @@
 <!-- layout -->
 <template>
-  <main class="width">
-    <header>
-      <Icon class="mt-9 mb-7"/>
-      <h1 class="mb-2 font-prim">Tidying up the internet so teams and individuals can stay focused.</h1>
-      <h2 class="font-body">The web is a messy place—it can be overwhelming and disorganized. We believe there's a better way to save, group, and share vibes (oh, and cat videos).</h2>
-    </header>
-  </main>
+  <div class="app">
+    <Hero
+      header="Tidying up the internet so teams and individuals can stay focused."
+      subhead="The web is a messy place—it can be overwhelming and disorganized. We believe there's a better way to save, group, and share vibes (oh, and cat videos)."
+    />
+    
+    <form
+    name="contactus"
+    action="/"
+    method="post"
+    netlify
+    netlify-honeypot="bot-field">
+
+    <input type="hidden" name="form-name" value="contact"/>
+    <div class="name">
+      <label class="font-sec" for="name">Your Name</label>
+      <input type="text" name="name" required/>
+    </div>
+
+    <div class="email">
+      <label class="font-sec" for="email">Your Email</label>
+      <input type="email" name="email" required/>
+    </div>
+
+    <div class="message">
+      <label class="font-sec" for="message">Project Information</label>
+      <textarea data-autoresize rows="2" name="message" required/>
+    </div>
+
+    <button class="font-sec uc" type="submit" value="Send message">Submit Form</button>
+  </form>
+  </div>
 </template>
 
 <!-- style -->
 <style lang="scss" scoped>
   @import '~/static/style/grid.scss';
 
-  .wrapper {
-    border: 4px solid green;
-    position: relative;
-    margin: 0 auto;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    h1, h2 { text-align: center; }
-    h1 {
-      font-size: 4rem;
-      line-height: 1.2;
-      @include breakpoint(mdl) { font-size: 6.4rem; }
-    }
-    h2 {
-      max-width: 56ch;
-      font-size: 1.8rem;
-      @include breakpoint(mdl) { font-size: 2rem; }
-    }
-  }
 </style>
 
 <!-- logic -->
 <script>
-  import Icon from '~/components/Icon'
+  import Hero from '~/components/Hero'
   export default {
     head: () => ({
       title: 'home'
     }),
-    components: { Icon, },
+    components: { Hero, },
     mounted() {
-      // gsap.from('.anim--enter', {
-      //   opacity: 0,
-      //   y: 200,
-      //   skewY: 10,
-      //   stagger: .15,
-      //   duration: 1,
-      //   ease: Power4.easeInOut
-      // })
+
     }
   }
 </script>
