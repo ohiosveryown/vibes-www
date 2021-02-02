@@ -20,7 +20,7 @@
       />
       <img
         class="cluster c2"
-        src="../static/img/cluster-02@2x.png"
+        src="../static/img/cluster-02-2@2x.png"
         alt="avatars"
       />
       <img
