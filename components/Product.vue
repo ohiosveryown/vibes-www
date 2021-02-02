@@ -60,7 +60,11 @@
       </figure>
     </div>
 
-    <img src="../static/img/bg@2x.png" alt="" class="bg" />
+    <img
+      src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612240607/vibes-www/bg_2x_gwhkw9.png"
+      alt=""
+      class="bg"
+    />
   </section>
 </template>
 
