@@ -1,0 +1,86 @@
+<!-- layout -->
+<template>
+  <section class="width">
+    <figure class="mb-9">
+      <video
+        autoplay="autoplay"
+        playsinline=""
+        muted
+        loop="loop"
+        controls="true"
+        poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1612194736/vibes-www/cover_snmq67.jpg"
+      >
+        <source
+          src="https://res.cloudinary.com/da32ufmnf/video/upload/v1612283673/vibes-www/v_mfq0fo.mp4"
+        />
+        <source />
+      </video>
+    </figure>
+
+    <article class="pb-0">
+      <h4 class="mb-2 font-prim">So, what exactly is it now?</h4>
+      <p class="font-body">
+        You can think of the Vibes app as a DVR for the internet
+        – remember&nbsp;those?
+      </p>
+      <p class="font-body">
+        Save articles, videos, audio, and stories from any publication, page, or
+        app. Curate your own space, or collaborate and share with&nbsp;others.
+      </p>
+      <p class="font-body">
+        Once you have your Vibes saved, use Toolbox to easily find, filter, and
+        reference your content for simple recollection and&nbsp;reception.
+      </p>
+    </article>
+  </section>
+</template>
+
+<!-- style -->
+<style lang="scss" scoped>
+@import "~/static/style/grid.scss";
+figure {
+  margin-top: 4.8rem;
+  padding: 4.8rem 0;
+  min-height: 10rem;
+  background: linear-gradient(248deg, #eeaeca -16%, #94bbe9 134%);
+  @include breakpoint(md) {
+    margin-top: 8rem;
+    padding: 8rem 0;
+  }
+  @include breakpoint(mdl) {
+    padding: 12rem 0;
+  }
+}
+
+video {
+  margin: auto;
+  width: 80%;
+  box-shadow: 0px 22px 44px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+
+article {
+  margin: 0 auto;
+  text-align: center;
+  p {
+    margin-bottom: 2rem;
+  }
+  @include breakpoint(md) {
+    width: grid-width(8.4);
+  }
+}
+
+h4 {
+  font-size: 3.2rem;
+  @include breakpoint(md) {
+    font-size: 3.2rem;
+  }
+}
+</style>
+
+<!-- logic -->
+<script>
+export default {
+  mounted() {},
+};
+</script>

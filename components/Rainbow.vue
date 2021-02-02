@@ -115,7 +115,6 @@
   position: relative;
   width: 100%;
   top: 20rem;
-  opacity: 0.72;
 }
 
 .layer-0 {
