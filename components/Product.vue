@@ -14,7 +14,7 @@
       <figure>
         <img
           class="bubble bubble-01"
-          src="../static/img/bubble-01.png"
+          src="../static/img/bubble-01c.png"
           alt="Vibe Group"
         />
       </figure>
@@ -59,6 +59,8 @@
         />
       </figure>
     </div>
+
+    <img src="../static/img/bg@2x.png" alt="" class="bg" />
   </section>
 </template>
 
@@ -79,12 +81,19 @@ video,
   }
 }
 
+.bg {
+  position: absolute;
+  z-index: var(--zmin);
+  top: 0;
+}
+
 .bubbles {
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
   padding: 6.4rem 0;
+  pointer-events: none;
 }
 
 figure:nth-of-type(1) {
@@ -100,7 +109,7 @@ figure:nth-of-type(2) {
   display: none;
   width: 20rem;
   height: auto;
-  transform: translate(2.4rem, 8rem);
+  transform: translate(1.2rem, 8rem);
   @include breakpoint(md) {
     display: inherit;
   }
@@ -145,7 +154,6 @@ figure:nth-of-type(6) {
 <!-- logic -->
 <script>
 export default {
-  // props: [ 'header', 'subhead' ],
   mounted() {
     const random = (min, max) => {
       const delta = max - min;
@@ -154,11 +162,7 @@ export default {
 
     const randomX = random(1, 10);
     const randomY = random(1, 10);
-    const randomDelay = random(0, 1);
     const randomTime = random(3, 5);
-    const randomTime2 = random(5, 10);
-    const randomAngle = random(-10, 10);
-
     const bubbles = gsap.utils.toArray(".bubble");
 
     bubbles.forEach((bubble) => {
