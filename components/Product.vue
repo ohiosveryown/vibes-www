@@ -8,13 +8,13 @@
       <source />
     </video> -->
 
-    <img src="../static/img/delete@2x.png" alt="" class="delete" />
+    <img src="../static/img/delete@2x.png" alt="￼" class="delete" />
 
     <div class="bubbles">
       <figure>
         <img
           class="bubble bubble-01"
-          src="../static/img/bubble-01c.png"
+          src="../static/img/bubble-01.png"
           alt="Vibe Group"
         />
       </figure>
@@ -60,17 +60,17 @@
       </figure>
     </div>
 
-    <img
-      src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612240607/vibes-www/bg_2x_gwhkw9.png"
-      alt=""
-      class="bg"
-    />
+    <div class="background-wrapper">
+      <div class="blur"></div>
+      <Rainbow />
+    </div>
   </section>
 </template>
 
 <!-- style -->
 <style lang="scss" scoped>
 @import "~/static/style/grid.scss";
+
 section {
   position: relative;
 }
@@ -85,10 +85,21 @@ video,
   }
 }
 
-.bg {
+.background-wrapper {
   position: absolute;
   z-index: var(--zmin);
-  top: 0;
+  top: -40rem;
+  padding-bottom: 40rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.blur {
+  position: absolute;
+  z-index: var(--z1);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(100px);
 }
 
 .bubbles {
@@ -96,16 +107,21 @@ video,
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  padding: 6.4rem 0;
+  padding: 6.4rem 0 6.4rem;
   pointer-events: none;
+  @include breakpoint(md) {
+    padding: 0rem 0 2.4rem;
+  }
+  @include breakpoint(mdl) {
+    padding: 0rem 0 6.4rem;
+  }
 }
 
 figure:nth-of-type(1) {
   width: 14.4rem;
   height: auto;
-  transform: translateX(0rem);
+  transform: translateX(-2rem);
   @include breakpoint(md) {
-    transform: translateX(-2rem);
   }
 }
 
@@ -122,9 +138,9 @@ figure:nth-of-type(2) {
 figure:nth-of-type(3) {
   width: 21.6rem;
   height: auto;
-  transform: translate(1.2rem, -4.8rem);
+  transform: translateY(-2.4rem);
   @include breakpoint(md) {
-    transform: translate(0, -4.8rem);
+    transform: translateY(-4.8rem);
   }
 }
 
@@ -145,19 +161,20 @@ figure:nth-of-type(5) {
 }
 
 figure:nth-of-type(6) {
-  display: none;
   width: 15.4rem;
   height: auto;
-  transform: translate(2.4rem, 1.2rem);
+  transform: translateX(1.2rem);
   @include breakpoint(md) {
-    display: inherit;
+    transform: translate(2.4rem, 1.2rem);
   }
 }
 </style>
 
 <!-- logic -->
 <script>
+import Rainbow from "./Rainbow";
 export default {
+  components: { Rainbow },
   mounted() {
     const random = (min, max) => {
       const delta = max - min;
