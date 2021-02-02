@@ -1,48 +1,63 @@
 <!-- layout -->
 <template>
   <section>
-    <video autoplay="autoplay" playsinline="" loop="loop">
+    <!-- <video autoplay="autoplay" playsinline="" loop="loop">
       <source
         src="https://res.cloudinary.com/da32ufmnf/video/upload/v1597081255/blush/blush_d2t8sk.mp4"
       />
       <source />
-    </video>
-    <img
-      class="bg"
-      src="../static/img/bg@2x.png"
-      alt="gradient background image"
-    />
-    <div class="clusters">
-      <img
-        class="cluster c1"
-        src="../static/img/cluster-01@2x.png"
-        alt="avatars"
-      />
-      <img
-        class="cluster c2"
-        src="../static/img/cluster-02-2@2x.png"
-        alt="avatars"
-      />
-      <img
-        class="cluster c3"
-        src="../static/img/cluster-03@2x.png"
-        alt="avatars"
-      />
-      <img
-        class="cluster c4"
-        src="../static/img/cluster-04@2x.png"
-        alt="avatars"
-      />
-      <img
-        class="cluster c5"
-        src="../static/img/cluster-05@2x.png"
-        alt="avatars"
-      />
-      <img
-        class="cluster c6"
-        src="../static/img/cluster-06@2x.png"
-        alt="avatars"
-      />
+    </video> -->
+
+    <img src="../static/img/delete@2x.png" alt="" class="delete" />
+
+    <div class="bubbles">
+      <figure>
+        <img
+          class="bubble bubble-01"
+          src="../static/img/bubble-01.png"
+          alt="Vibe Group"
+        />
+      </figure>
+
+      <figure>
+        <img
+          class="bubble bubble-02"
+          src="../static/img/bubble-02.png"
+          alt="Vibe Group"
+        />
+      </figure>
+
+      <figure>
+        <img
+          class="bubble bubble-03"
+          src="../static/img/bubble-03.png"
+          alt="Vibe Group"
+        />
+      </figure>
+
+      <figure>
+        <img
+          class="bubble bubble-04"
+          src="../static/img/bubble-04.png"
+          alt="Vibe Group"
+        />
+      </figure>
+
+      <figure>
+        <img
+          class="bubble bubble-05"
+          src="../static/img/bubble-05.png"
+          alt="Vibe Group"
+        />
+      </figure>
+
+      <figure>
+        <img
+          class="bubble bubble-06"
+          src="../static/img/bubble-06.png"
+          alt="Vibe Group"
+        />
+      </figure>
     </div>
   </section>
 </template>
@@ -54,7 +69,8 @@ section {
   position: relative;
 }
 
-video {
+video,
+.delete {
   margin: 0 auto;
   max-width: var(--max-width);
   width: 90vw;
@@ -63,37 +79,66 @@ video {
   }
 }
 
-.bg {
-  position: absolute;
-  z-index: var(--zmin);
-  top: 0rem;
-  pointer-events: none;
+.bubbles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 6.4rem 0;
+}
+
+figure:nth-of-type(1) {
+  width: 14.4rem;
+  height: auto;
+  transform: translateX(0rem);
   @include breakpoint(md) {
-    top: -20rem;
+    transform: translateX(-2rem);
   }
 }
 
-.clusters {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-.cluster {
-  width: 16rem;
+figure:nth-of-type(2) {
+  display: none;
+  width: 20rem;
   height: auto;
+  transform: translate(2.4rem, 8rem);
+  @include breakpoint(md) {
+    display: inherit;
+  }
 }
 
-.cluster:nth-of-type(1) {
-  margin-left: -2.4rem;
+figure:nth-of-type(3) {
+  width: 21.6rem;
+  height: auto;
+  transform: translate(1.2rem, -4.8rem);
+  @include breakpoint(md) {
+    transform: translate(0, -4.8rem);
+  }
 }
 
-.cluster:nth-of-type(2) {
+figure:nth-of-type(4) {
+  width: 19rem;
+  height: auto;
+  transform: translateY(2.4rem);
 }
 
-.cluster:nth-of-type(6) {
-  margin-right: -2.4rem;
+figure:nth-of-type(5) {
+  display: none;
+  width: 17.6rem;
+  height: auto;
+  transform: translate(1.2rem, 8rem);
+  @include breakpoint(md) {
+    display: inherit;
+  }
+}
+
+figure:nth-of-type(6) {
+  display: none;
+  width: 15.4rem;
+  height: auto;
+  transform: translate(2.4rem, 1.2rem);
+  @include breakpoint(md) {
+    display: inherit;
+  }
 }
 </style>
 
@@ -102,6 +147,11 @@ video {
 export default {
   // props: [ 'header', 'subhead' ],
   mounted() {
+    const random = (min, max) => {
+      const delta = max - min;
+      return (direction = 1) => (min + delta * Math.random()) * direction;
+    };
+
     const randomX = random(1, 10);
     const randomY = random(1, 10);
     const randomDelay = random(0, 1);
@@ -109,39 +159,35 @@ export default {
     const randomTime2 = random(5, 10);
     const randomAngle = random(-10, 10);
 
-    const cans = gsap.utils.toArray(".cluster");
-    cans.forEach((can) => {
-      gsap.set(can, {
+    const bubbles = gsap.utils.toArray(".bubble");
+
+    bubbles.forEach((bubble) => {
+      gsap.set(bubble, {
         x: randomX(-1),
         y: randomX(1),
       });
 
-      moveX(can, 1);
-      moveY(can, -1);
+      const moveX = (target, direction) => {
+        gsap.to(target, randomTime(), {
+          x: randomX(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveX,
+          onCompleteParams: [target, direction * -1],
+        });
+      };
+
+      const moveY = (target, direction) => {
+        gsap.to(target, randomTime(), {
+          y: randomY(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveY,
+          onCompleteParams: [target, direction * -1],
+        });
+      };
+
+      moveX(bubble, 1);
+      moveY(bubble, -1);
     });
-
-    function moveX(target, direction) {
-      gsap.to(target, randomTime(), {
-        x: randomX(direction),
-        ease: Sine.easeInOut,
-        onComplete: moveX,
-        onCompleteParams: [target, direction * -1],
-      });
-    }
-
-    function moveY(target, direction) {
-      gsap.to(target, randomTime(), {
-        y: randomY(direction),
-        ease: Sine.easeInOut,
-        onComplete: moveY,
-        onCompleteParams: [target, direction * -1],
-      });
-    }
-
-    function random(min, max) {
-      const delta = max - min;
-      return (direction = 1) => (min + delta * Math.random()) * direction;
-    }
   },
 };
 </script>
