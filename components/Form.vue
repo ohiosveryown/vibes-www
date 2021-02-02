@@ -67,9 +67,18 @@
     border-radius: 4px;
     background: var(--gravity);
     color: #fff;
+    transition: all 400ms ease;
+    will-change: scale, box-shadow;
     box-shadow: 
-      0px 2px 4px rgba(0, 0, 0, 0.12), 
-      0px 4px 25px rgba(0, 0, 0, 0.25);
+        0 2px 4px #A2A9BE, 
+        0 4px 24px #9BA5CB;
+    &:hover {
+      background: 070707;
+      transform: scale(1.04);
+      box-shadow: 
+        0 2px 4px #A2A9BE, 
+        0 6px 40px #9BA5CB;
+    }
   }
 </style>
 

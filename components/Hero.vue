@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     h1, h2 { text-align: center; }
     h1 {
       font-size: 4rem;
@@ -27,8 +27,8 @@
     }
     h2 {
       max-width: 56ch;
-      font-size: 1.8rem;
-      @include breakpoint(mdl) { font-size: 2rem; }
+      font-size: 1.6rem;
+      @include breakpoint(mdl) { font-size: 1.8rem; }
     }
   }
 </style>
