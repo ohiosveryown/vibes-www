@@ -73,12 +73,15 @@
     </div> -->
 
     <div class="bg">
-      <img src="~/static/img/bg@3x.png" alt="" />
+      <img
+        src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612318145/vibes-www/bg_fze1pg.jpg"
+        alt="document background"
+      />
     </div>
 
     <article class="width">
       <h3 class="mb-2 font-prim">
-        Vibes connects your thoughts and ideas all in one place.
+        Vibes connects your thoughts and ideas all in one&nbsp;place.
       </h3>
       <p class="font-body">
         Save content, create moodboards, organize information, and share ideas
@@ -124,6 +127,10 @@ video,
   width: 100%;
   opacity: 0.92;
   overflow-x: hidden;
+}
+
+.bg {
+  mix-blend-mode: multiply;
 }
 
 .blur {
