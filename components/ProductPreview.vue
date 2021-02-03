@@ -255,47 +255,14 @@ export default {
     const ua = navigator.userAgent.toLowerCase();
     if (ua.indexOf("safari") != -1) {
       if (ua.indexOf("chrome") > -1) {
-        alert("Chrome");
       } else {
         media();
         window.addEventListener("resize", () => {
           media();
         });
-        alert("Safari");
       }
     }
 
-    // if (navigator.userAgent.indexOf("Safari") > 0) {
-    //   const mq = matchMedia("(min-width: 700px)");
-    //   media();
-    //   window.addEventListener("resize", () => {
-    //     media();
-    //   });
-    //   console.log("Safari");
-    // } else {
-    //   console.log("Not Safari");
-    // }
-
-    // if (navigator.userAgent.indexOf("Safari") > 0) {
-    //   const mq = matchMedia("(min-width: 700px)");
-    //   // media();
-    //   if (mq.matches) {
-    //     getBubbles.style.padding = "4rem 0 6.4rem";
-    //   } else {
-    //     getBubbles.style.padding = "6.4rem 0";
-    //   }
-    //   window.addEventListener("resize", () => {
-    //     // media();
-    //     if (mq.matches) {
-    //       getBubbles.style.padding = "4rem 0 6.4rem";
-    //     } else {
-    //       getBubbles.style.padding = "6.4rem 0";
-    //     }
-    //   });
-    //   console.log("Safari");
-    // } else {
-    //   console.log("Not Safari");
-    // }
     const random = (min, max) => {
       const delta = max - min;
       return (direction = 1) => (min + delta * Math.random()) * direction;
