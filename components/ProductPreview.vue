@@ -242,7 +242,14 @@ import Rainbow from "./Rainbow";
 export default {
   components: { Rainbow },
   mounted() {
+    const getBubbles = document.querySelector(".bubbles");
     if (navigator.userAgent.indexOf("Chrome") > 0) {
+      const mq = matchMedia("(min-width: 700px)");
+      if (mq.matches) {
+        getBubbles.style.padding = "16rem 0";
+      } else {
+        getBubbles.style.padding = "6.4rem 0 8rem";
+      }
       console.log("Chrome");
     } else {
       console.log("Not Chrome");
