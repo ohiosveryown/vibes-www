@@ -118,16 +118,21 @@
 }
 
 .layer-0 {
+  // position: absolute;
+  // top: 0;
+  // right: 0;
 }
 
 .layer-1 {
   position: absolute;
   top: 24rem;
+  left: 0;
 }
 
 .layer-2 {
   position: absolute;
   top: 48rem;
+  left: 0;
 }
 
 .layer-3 {

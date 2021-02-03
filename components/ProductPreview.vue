@@ -65,9 +65,15 @@
       </figure>
     </div>
 
-    <div class="background-wrapper">
-      <div class="blur"></div>
-      <Rainbow />
+    <!-- <div class="bg-wrap">
+      <div class="background-wrapper">
+        <div class="blur" />
+        <Rainbow />
+      </div>
+    </div> -->
+
+    <div class="bg">
+      <img src="~/static/img/bg@3x.png" alt="" />
     </div>
 
     <article class="width">
@@ -103,6 +109,13 @@ video,
   }
 }
 
+.bg-wrap {
+  filter: blur(100px);
+  // position: ￼;
+  // z-index: var(--zmin);
+}
+
+.bg,
 .background-wrapper {
   position: absolute;
   z-index: var(--zmin);
@@ -118,7 +131,7 @@ video,
   z-index: var(--z1);
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(100px);
+  // backdrop-filter: blur(100px);
 }
 
 .bubbles {
@@ -231,6 +244,11 @@ import Rainbow from "./Rainbow";
 export default {
   components: { Rainbow },
   mounted() {
+    if (navigator.userAgent.indexOf("Chrome") > 0) {
+      console.log("Chrome");
+    } else {
+      console.log("Not Chrome");
+    }
     const random = (min, max) => {
       const delta = max - min;
       return (direction = 1) => (min + delta * Math.random()) * direction;

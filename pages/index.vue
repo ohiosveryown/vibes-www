@@ -8,6 +8,7 @@
     <ProductPreview />
     <SectionToolbox />
     <SectionDarkMode />
+    <Footer />
   </div>
 </template>
 
@@ -22,11 +23,13 @@ import Hero from "~/components/Hero";
 import ProductPreview from "~/components/ProductPreview";
 import SectionToolbox from "~/components/SectionToolbox";
 import SectionDarkMode from "~/components/SectionDarkMode";
+import Footer from "~/components/Footer";
+Footer;
 export default {
   head: () => ({
     title: "home",
   }),
-  components: { Hero, ProductPreview, SectionToolbox, SectionDarkMode },
+  components: { Hero, ProductPreview, SectionToolbox, SectionDarkMode, Footer },
   mounted() {},
 };
 </script>
