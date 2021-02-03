@@ -65,13 +65,6 @@
       </figure>
     </div>
 
-    <!-- <div class="bg-wrap">
-      <div class="background-wrapper">
-        <div class="blur" />
-        <Rainbow />
-      </div>
-    </div> -->
-
     <div class="bg">
       <img
         src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612318145/vibes-www/bg_fze1pg.jpg"

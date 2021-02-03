@@ -2,7 +2,10 @@
 <template>
   <section class="width pb-9">
     <figure class="mb-9">
-      <img src="../static/img/poster-toolbox.png" alt="" />
+      <img
+        src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612319245/vibes-www/darkmode_ktkn3b.png"
+        alt="Vibe app dark mode and light mode"
+      />
     </figure>
 
     <article class="pb-0">
@@ -25,23 +28,24 @@
 @import "~/static/style/grid.scss";
 figure {
   margin-top: 4.8rem;
-  padding: 4.8rem 0;
+  padding: 1.2rem 0 0;
   min-height: 10rem;
   background: linear-gradient(104deg, #eeaeca 2%, #94bbe9 100%);
+  overflow: hidden;
   @include breakpoint(md) {
     margin-top: 8rem;
-    padding: 8rem 0;
+    padding: 2.4rem 0 0;
   }
   @include breakpoint(mdl) {
-    padding: 12rem 0;
+    padding: 2.4rem 0 0;
   }
 }
 
 img {
   margin: auto;
-  width: 80%;
-  box-shadow: 0px 22px 44px rgba(0, 0, 0, 0.24);
-  border-radius: 10px;
+  // width: 80%;
+  // box-shadow: 0px 22px 44px rgba(0, 0, 0, 0.24);
+  // border-radius: 10px;
 }
 
 article {
