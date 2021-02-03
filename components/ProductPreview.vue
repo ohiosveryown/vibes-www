@@ -137,13 +137,13 @@ video,
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  padding: 6.4rem 0 6.4rem;
+  padding: 6.4rem 0 8rem;
   pointer-events: none;
   @include breakpoint(md) {
-    padding: 0;
+    padding: 12rem 0;
   }
   @include breakpoint(mdl) {
-    padding: 4rem 0 6.4rem;
+    padding: 16rem 0;
   }
 }
 
@@ -243,17 +243,59 @@ export default {
   components: { Rainbow },
   mounted() {
     const getBubbles = document.querySelector(".bubbles");
-    if (navigator.userAgent.indexOf("Chrome") > 0) {
+    const media = () => {
       const mq = matchMedia("(min-width: 700px)");
       if (mq.matches) {
-        getBubbles.style.padding = "16rem 0";
+        getBubbles.style.padding = "4rem 0 6.4rem";
       } else {
-        getBubbles.style.padding = "6.4rem 0 8rem";
+        getBubbles.style.padding = "6.4rem 0";
       }
-      console.log("Chrome");
-    } else {
-      console.log("Not Chrome");
+    };
+
+    const ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf("safari") != -1) {
+      if (ua.indexOf("chrome") > -1) {
+        alert("Chrome");
+      } else {
+        media();
+        window.addEventListener("resize", () => {
+          media();
+        });
+        alert("Safari");
+      }
     }
+
+    // if (navigator.userAgent.indexOf("Safari") > 0) {
+    //   const mq = matchMedia("(min-width: 700px)");
+    //   media();
+    //   window.addEventListener("resize", () => {
+    //     media();
+    //   });
+    //   console.log("Safari");
+    // } else {
+    //   console.log("Not Safari");
+    // }
+
+    // if (navigator.userAgent.indexOf("Safari") > 0) {
+    //   const mq = matchMedia("(min-width: 700px)");
+    //   // media();
+    //   if (mq.matches) {
+    //     getBubbles.style.padding = "4rem 0 6.4rem";
+    //   } else {
+    //     getBubbles.style.padding = "6.4rem 0";
+    //   }
+    //   window.addEventListener("resize", () => {
+    //     // media();
+    //     if (mq.matches) {
+    //       getBubbles.style.padding = "4rem 0 6.4rem";
+    //     } else {
+    //       getBubbles.style.padding = "6.4rem 0";
+    //     }
+    //   });
+    //   console.log("Safari");
+    // } else {
+    //   console.log("Not Safari");
+    // }
     const random = (min, max) => {
       const delta = max - min;
       return (direction = 1) => (min + delta * Math.random()) * direction;
