@@ -67,6 +67,7 @@
 
     <div class="bg">
       <img
+        class="rainbow"
         src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612318145/vibes-www/bg_fze1pg.jpg"
         alt="document background"
       />
@@ -105,33 +106,30 @@ video,
   }
 }
 
-.bg-wrap {
-  filter: blur(100px);
-  // position: ￼;
-  // z-index: var(--zmin);
-}
-
-.bg,
-.background-wrapper {
+.bg {
   position: absolute;
   z-index: var(--zmin);
-  top: -40rem;
+  top: -70rem;
   padding-bottom: 40rem;
   width: 100%;
   opacity: 0.92;
   overflow-x: hidden;
-}
-
-.bg {
   mix-blend-mode: multiply;
+  @include breakpoint(mdl) {
+    top: -40rem;
+  }
 }
 
-.blur {
-  position: absolute;
-  z-index: var(--z1);
-  width: 100%;
-  height: 100%;
-  // backdrop-filter: blur(100px);
+.rainbow {
+  width: 250vw;
+  max-width: none;
+  @include breakpoint(md) {
+    width: 190vw;
+  }
+  @include breakpoint(mdl) {
+    max-width: 100%;
+    width: inherit;
+  }
 }
 
 .bubbles {
