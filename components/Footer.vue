@@ -1,17 +1,19 @@
 <!-- layout -->
 <template>
   <footer class="width">
-    <Icon class="mt-7 mb-9" />
-    <Form class="mt-4 mb-4" />
-    <p class="mb-3 tac font-body">
-      Sign up to get notified when Vibes is ready for release; currently
-      estimating for the first quarter of 2021.
-    </p>
-    <h5 class="font-sec">
-      <a target="_blank" href="https://twitter.com/cmykw_"
-        >Follow Updates on Twitter</a
-      >
-    </h5>
+    <article class="width">
+      <Icon class="mt-7 mb-9" />
+      <Form class="mt-4 mb-4" />
+      <p class="mb-3 tac font-body">
+        Sign up to get notified when Vibes is ready for release; currently
+        estimating for the first quarter of 2021.
+      </p>
+      <h5 class="font-sec">
+        <a target="_blank" href="https://twitter.com/cmykw_"
+          >Follow Updates on Twitter</a
+        >
+      </h5>
+    </article>
 
     <img
       src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612319533/vibes-www/bg-footer_mbxpa9.jpg"
@@ -25,13 +27,15 @@
 <style lang="scss" scoped>
 @import "~/static/style/grid.scss";
 footer {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  flex-direction: column;
-  align-items: center;
   position: relative;
   width: 100%;
+}
+
+article {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
 p {

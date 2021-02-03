@@ -62,11 +62,10 @@ button {
   color: #fff;
   transition: all 400ms ease;
   will-change: scale, box-shadow;
-  box-shadow: 0 2px 4px #a2a9be, 0 4px 24px #9ba5cb;
+  box-shadow: 0 2px 4px #4b4e5a, 0 4px 24px #3c3c46;
   &:hover {
     background: 070707;
     transform: scale(1.04);
-    box-shadow: 0 2px 4px #a2a9be, 0 6px 40px #9ba5cb;
   }
 }
 </style>
