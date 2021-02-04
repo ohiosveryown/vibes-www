@@ -26,11 +26,9 @@
 @import "~/static/style/grid.scss";
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  @include breakpoint(sm) {
-    flex-direction: row;
-    width: 38.6rem;
+  @include breakpoint(md) {
     width: grid-width(4.25);
   }
 }
@@ -38,18 +36,24 @@ form {
 input,
 button {
   margin-bottom: 1.6rem;
-  padding: 1.4rem 2.4rem 1.8rem;
+  padding: 1.8rem 1rem 2rem;
   font-size: 1.4rem;
+  @include breakpoint(md) {
+    padding: 1.4rem 2.4rem 1.8rem;
+  }
 }
 
 input {
-  flex: 1;
   margin-right: 0.8rem;
-  padding-left: 3.2rem;
+  padding-left: 2.2rem;
   border-radius: 4px;
   border: 0;
   background: #fff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06), 0px 4px 24px rgba(0, 0, 0, 0.06);
+  @include breakpoint(md) {
+    flex: 1;
+    padding-left: 3.2rem;
+  }
 }
 
 input::placeholder {
@@ -58,6 +62,7 @@ input::placeholder {
 }
 
 button {
+  flex: 1;
   margin-left: 0.2rem;
   border-radius: 4px;
   background: var(--gravity);
@@ -65,6 +70,9 @@ button {
   transition: all 400ms ease;
   will-change: scale, box-shadow;
   box-shadow: 0 2px 4px #4b4e5a, 0 4px 24px #3c3c46;
+  @include breakpoint(md) {
+    flex: none;
+  }
   &:hover {
     background: 070707;
     transform: scale(1.04);

@@ -1,7 +1,7 @@
 <!-- layout -->
 <template>
   <section class="width pb-9">
-    <figure class="mb-9">
+    <figure>
       <img
         src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612319245/vibes-www/darkmode_ktkn3b.png"
         alt="Vibe app dark mode and light mode"
@@ -30,7 +30,7 @@
 <style lang="scss" scoped>
 @import "~/static/style/grid.scss";
 figure {
-  margin: 4.8rem auto 0;
+  margin: 4.8rem auto 4.8rem;
   padding: 1.2rem 0 0;
   min-height: 10rem;
   background: linear-gradient(104deg, #eeaeca 2%, #94bbe9 100%);
@@ -67,6 +67,7 @@ h4 {
 
 p {
   margin-bottom: 2rem;
+  font-size: 1.6rem;
   @include breakpoint(md) {
     font-size: 2.2rem;
   }

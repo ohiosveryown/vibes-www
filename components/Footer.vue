@@ -28,8 +28,11 @@
 @import "~/static/style/grid.scss";
 footer {
   position: relative;
-  margin-top: 16rem;
+  margin-top: 8rem;
   width: 100%;
+  @include breakpoint(md) {
+    margin-top: 16rem;
+  }
 }
 
 article {
@@ -40,6 +43,7 @@ article {
 }
 
 p {
+  font-size: 1.6rem;
   @include breakpoint(md) {
     font-size: 1.8rem;
     width: grid-width(6);
@@ -49,8 +53,11 @@ p {
 h5 {
   margin: 4rem 0;
   font-size: 1.4;
-  color: #fff;
+  color: var(--gravity);
   opacity: 1;
+  @include breakpoint(md) {
+    color: #fff;
+  }
 }
 
 .bg {

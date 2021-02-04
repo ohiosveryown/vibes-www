@@ -3,7 +3,8 @@
   <div class="app">
     <Hero
       header="Let's create good vibes."
-      subhead="The web is a messy place—it can be overwhelming and disorganized. We believe there's a better way to save, group, and share vibes (and of course, cat videos)."
+      subheadSm="The web is a messy place—it can be overwhelming and disorganized. We believe there's a better way to save, group, and share vibes."
+      subheadMd="The web is a messy place—it can be overwhelming and disorganized. We believe there's a better way to save, group, and share vibes (and of course, cat videos)."
     />
     <ProductPreview />
     <SectionDarkMode />

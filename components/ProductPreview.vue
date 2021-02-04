@@ -75,7 +75,7 @@
 
     <article class="width">
       <h3 class="mb-3 font-prim">
-        Vibes connects your thoughts and ideas all in one&nbsp;place.
+        Vibes connects your thoughts and ideas in one&nbsp;place.
       </h3>
       <p class="font-body">
         Save content, create moodboards, organize information, and share ideas
@@ -101,7 +101,7 @@ video,
   width: 90vw;
   box-shadow: 0px 20px 68px rgba(0, 0, 0, 0.32);
   @include breakpoint(md) {
-    margin-bottom: 0;
+    margin: 0 auto;
     width: grid-width(8);
   }
 }
@@ -148,11 +148,15 @@ video,
 }
 
 figure:nth-of-type(1) {
-  width: 14.4rem;
+  width: 20rem;
   height: auto;
-  transform: translateX(-2rem);
+  transform: translateX(-0.8rem);
+  @include breakpoint(md) {
+    width: 14.4rem;
+  }
   @include breakpoint(mdl) {
     width: 18rem;
+    transform: translateX(-2rem);
   }
 }
 
@@ -163,7 +167,7 @@ figure:nth-of-type(2) {
   transform: translate(1.2rem, 8rem);
   @include breakpoint(md) {
     display: inherit;
-    transform: translate(0rem, 4rem);
+    transform: translate(0, 4rem);
   }
   @include breakpoint(mdl) {
     width: 24rem;
@@ -172,10 +176,11 @@ figure:nth-of-type(2) {
 }
 
 figure:nth-of-type(3) {
-  width: 21.6rem;
+  width: 24rem;
   height: auto;
   transform: translateY(-2.4rem);
   @include breakpoint(md) {
+    width: 21.6rem;
     transform: translateY(-1.2rem);
   }
   @include breakpoint(mdl) {
@@ -185,9 +190,12 @@ figure:nth-of-type(3) {
 }
 
 figure:nth-of-type(4) {
-  width: 19rem;
+  width: 24rem;
   height: auto;
   transform: translateY(2.4rem);
+  @include breakpoint(md) {
+    width: 19rem;
+  }
 }
 
 figure:nth-of-type(5) {
@@ -206,9 +214,9 @@ figure:nth-of-type(5) {
 }
 
 figure:nth-of-type(6) {
-  width: 15.4rem;
+  width: 18rem;
   height: auto;
-  transform: translateX(1.2rem);
+  transform: translateX(0.2rem);
   @include breakpoint(md) {
     width: 18rem;
     transform: translate(2.4rem, 1.2rem);
@@ -217,10 +225,10 @@ figure:nth-of-type(6) {
 
 article {
   margin: 0 auto;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   text-align: center;
   @include breakpoint(md) {
-    // padding-bottom: 7.2rem;
+    padding-bottom: 4rem;
     width: grid-width(8);
   }
   @include breakpoint(mdl) {
@@ -229,7 +237,7 @@ article {
 }
 
 h3 {
-  font-size: 2.8rem;
+  font-size: 8.4vw;
   line-height: 1.2;
   @include breakpoint(md) {
     font-size: 4.4vw;
@@ -238,7 +246,7 @@ h3 {
 }
 p {
   margin: auto;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   @include breakpoint(md) {
     max-width: 32ch;
     font-size: 2.4rem;
