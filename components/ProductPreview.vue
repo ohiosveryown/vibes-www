@@ -2,7 +2,7 @@
 <template>
   <section>
     <video
-      autoplay="autoplay"
+      preload="metadata"
       playsinline=""
       muted
       loop="loop"
@@ -10,7 +10,7 @@
       poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1612194736/vibes-www/cover_snmq67.jpg"
     >
       <source
-        src="https://res.cloudinary.com/da32ufmnf/video/upload/v1612283673/vibes-www/v_mfq0fo.mp4"
+        src="https://res.cloudinary.com/da32ufmnf/video/upload/v1612283673/vibes-www/v_mfq0fo.mp4#t=0.5"
       />
       <source />
     </video>
