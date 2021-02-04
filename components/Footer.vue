@@ -9,7 +9,9 @@
         estimating for the first quarter of 2021.
       </p>
       <h5 class="font-sec">
-        <a target="_blank" href="https://twitter.com/cmykw_"
+        <a
+          target="_blank"
+          href="https://twitter.com/cmykw_/status/1196273185987211264"
           >Follow Updates on Twitter</a
         >
       </h5>

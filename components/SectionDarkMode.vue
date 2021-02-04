@@ -85,7 +85,7 @@ p {
   margin-bottom: 2rem;
   font-size: 1.6rem;
   @include breakpoint(md) {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 }
 </style>

@@ -24,10 +24,7 @@
         vanity, and distraction. That means no ads, no data harvesting, no
         influencers, no algorithms and no&nbsp;distractions.
       </p>
-      <p class="font-body">
-        Once you have your Vibes saved, use Toolbox to easily find, filter, and
-        reference your content for simple recollection and&nbsp;reception.
-      </p>
+      <p class="font-body">Tune out the noise and let clarity&nbsp;in.</p>
     </article>
   </section>
 </template>
@@ -87,7 +84,7 @@ p {
   margin-bottom: 2rem;
   font-size: 1.6rem;
   @include breakpoint(md) {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 }
 </style>

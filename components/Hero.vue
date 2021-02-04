@@ -23,43 +23,47 @@ header {
   }
 
   @include breakpoint(mdl) {
-    margin-bottom: 8rem;
+    margin-bottom: 5.6rem;
   }
 
-  .icon {
-    margin: 4.8rem 0 4rem;
-    @include breakpoint(md) {
-      margin: 5.6rem 0 4rem;
-    }
+  @include breakpoint(lg) {
+    margin-bottom: 0rem;
   }
+}
 
-  h1,
-  h2 {
-    text-align: center;
+.icon {
+  margin: 4.8rem 0 4rem;
+  @include breakpoint(md) {
+    margin: 5.6rem 0 4rem;
   }
-  h1 {
-    font-size: 6rem;
-    line-height: 1;
-    @include breakpoint(md) {
-      font-size: 8.8vw;
-      line-height: 1.1;
-    }
-    @include breakpoint(mdl) {
-      font-size: 7.2vw;
-    }
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+h1 {
+  font-size: 6rem;
+  line-height: 1;
+  @include breakpoint(md) {
+    font-size: 8.8vw;
+    line-height: 1.1;
   }
-  h2 {
-    margin-top: 1.2rem;
-    margin: 1.2rem 0 4.8rem;
-    font-size: 1.9rem;
-    @include breakpoint(md) {
-      margin: 0 0 4.8rem;
-      max-width: 56ch;
-      font-size: 2rem;
-    }
-    @include breakpoint(mdl) {
-      margin: 0 0 6.4rem;
-    }
+  @include breakpoint(mdl) {
+    font-size: 7.2vw;
+  }
+}
+h2 {
+  margin-top: 1.2rem;
+  margin: 1.2rem 0 4.8rem;
+  font-size: 1.9rem;
+  @include breakpoint(md) {
+    margin: 0 0 4.8rem;
+    max-width: 56ch;
+    font-size: 2rem;
+  }
+  @include breakpoint(mdl) {
+    margin: 0 0 6.4rem;
   }
 }
 
