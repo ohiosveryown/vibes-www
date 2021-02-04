@@ -1,8 +1,8 @@
 <!-- layout -->
 <template>
-  <footer class="width">
+  <footer>
     <article class="width">
-      <Icon class="mt-7 mb-9" />
+      <Icon class="mb-9" />
       <Form class="mt-4 mb-4" />
       <p class="mb-3 tac font-body">
         Sign up to get notified when Vibes is ready for release; currently
@@ -28,6 +28,7 @@
 @import "~/static/style/grid.scss";
 footer {
   position: relative;
+  margin-top: 16rem;
   width: 100%;
 }
 
@@ -40,15 +41,16 @@ article {
 
 p {
   @include breakpoint(md) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     width: grid-width(6);
   }
 }
 
 h5 {
-  margin-bottom: 8rem;
+  margin: 4rem 0;
   font-size: 1.4;
-  opacity: 0.64;
+  color: #fff;
+  opacity: 1;
 }
 
 .bg {

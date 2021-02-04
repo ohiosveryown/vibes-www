@@ -31,6 +31,7 @@ form {
   @include breakpoint(sm) {
     flex-direction: row;
     width: 38.6rem;
+    width: grid-width(4.25);
   }
 }
 
@@ -44,6 +45,7 @@ button {
 input {
   flex: 1;
   margin-right: 0.8rem;
+  padding-left: 3.2rem;
   border-radius: 4px;
   border: 0;
   background: #fff;

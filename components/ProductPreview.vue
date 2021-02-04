@@ -74,7 +74,7 @@
     </div>
 
     <article class="width">
-      <h3 class="mb-2 font-prim">
+      <h3 class="mb-3 font-prim">
         Vibes connects your thoughts and ideas all in one&nbsp;place.
       </h3>
       <p class="font-body">
@@ -102,7 +102,7 @@ video,
   box-shadow: 0px 20px 68px rgba(0, 0, 0, 0.32);
   @include breakpoint(md) {
     margin-bottom: 0;
-    width: grid-width(9.5);
+    width: grid-width(8);
   }
 }
 
@@ -143,7 +143,7 @@ video,
     padding: 12rem 0;
   }
   @include breakpoint(mdl) {
-    padding: 16rem 0;
+    padding: 16rem 0 24rem;
   }
 }
 
@@ -151,6 +151,9 @@ figure:nth-of-type(1) {
   width: 14.4rem;
   height: auto;
   transform: translateX(-2rem);
+  @include breakpoint(mdl) {
+    width: 18rem;
+  }
 }
 
 figure:nth-of-type(2) {
@@ -163,6 +166,7 @@ figure:nth-of-type(2) {
     transform: translate(0rem, 4rem);
   }
   @include breakpoint(mdl) {
+    width: 24rem;
     transform: translate(1.2rem, 8rem);
   }
 }
@@ -175,6 +179,7 @@ figure:nth-of-type(3) {
     transform: translateY(-1.2rem);
   }
   @include breakpoint(mdl) {
+    width: 26rem;
     transform: translateY(-4.8rem);
   }
 }
@@ -195,6 +200,7 @@ figure:nth-of-type(5) {
     transform: translate(1.2rem, 4rem);
   }
   @include breakpoint(mdl) {
+    width: 22rem;
     transform: translate(1.2rem, 8rem);
   }
 }
@@ -204,6 +210,7 @@ figure:nth-of-type(6) {
   height: auto;
   transform: translateX(1.2rem);
   @include breakpoint(md) {
+    width: 18rem;
     transform: translate(2.4rem, 1.2rem);
   }
 }
@@ -213,7 +220,7 @@ article {
   padding-bottom: 4rem;
   text-align: center;
   @include breakpoint(md) {
-    padding-bottom: 7.2rem;
+    // padding-bottom: 7.2rem;
     width: grid-width(8);
   }
   @include breakpoint(mdl) {
@@ -225,13 +232,16 @@ h3 {
   font-size: 2.8rem;
   line-height: 1.2;
   @include breakpoint(md) {
-    font-size: 4rem;
+    font-size: 4.4vw;
+    line-height: 1.1;
   }
 }
 p {
+  margin: auto;
   font-size: 1.6rem;
   @include breakpoint(md) {
-    font-size: 2rem;
+    max-width: 32ch;
+    font-size: 2.4rem;
   }
 }
 </style>
@@ -246,7 +256,7 @@ export default {
     const media = () => {
       const mq = matchMedia("(min-width: 700px)");
       if (mq.matches) {
-        getBubbles.style.padding = "4rem 0 6.4rem";
+        getBubbles.style.padding = "4rem 0 12rem";
       } else {
         getBubbles.style.padding = "6.4rem 0";
       }

@@ -1,28 +1,44 @@
-@import '~/static/style/grid.scss';
+@import "~/static/style/grid.scss";
 
 @font-face {
-  font-family: 'Editorial';
+  font-family: "Editorial";
   src: url("../type/editorial.woff2") format("woff2");
   font-display: block;
 }
 
 @font-face {
-  font-family: 'Graphik';
+  font-family: "Graphik";
   src: url("../type/graphik.woff2") format("woff2");
   font-display: block;
 }
 
 @font-face {
-  font-family: 'Duospace';
+  font-family: "Duospace";
   src: url("../type/duospace.woff2") format("woff2");
   font-display: block;
 }
 
-.font-prim { font-family: 'Editorial', var(--system-ui); }
-.font-sec { font-family: 'Duospace', var(--monospace); }
-.font-body { font-family: 'Graphik', var(--system-ui); }
+.font-prim {
+  font-family: "Editorial", var(--system-ui);
+}
+.font-sec {
+  font-family: var(--monospace);
+}
+.font-body {
+  font-family: "Graphik", var(--system-ui);
+}
 
-.bold { -webkit-text-stroke: .2px var(--gravity); }
-.uc { text-transform: uppercase; }
-.tac { text-align: center; }
-.tar { text-align: right; }
+// .font-sec { font-family: 'Duospace', var(--monospace); }
+
+.bold {
+  -webkit-text-stroke: 0.2px var(--gravity);
+}
+.uc {
+  text-transform: uppercase;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
