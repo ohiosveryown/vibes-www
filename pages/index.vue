@@ -28,7 +28,7 @@ import Footer from "~/components/Footer";
 Footer;
 export default {
   head: () => ({
-    title: "home",
+    title: "V I B E S ✨",
   }),
   components: { Hero, ProductPreview, SectionToolbox, SectionDarkMode, Footer },
   mounted() {
