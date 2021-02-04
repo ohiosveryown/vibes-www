@@ -27,8 +27,12 @@
 form {
   display: flex;
   flex-direction: row;
+  margin: 0 auto 2.4rem;
   width: 100%;
   @include breakpoint(md) {
+    width: 56%;
+  }
+  @include breakpoint(mdl) {
     width: grid-width(4.25);
   }
 }

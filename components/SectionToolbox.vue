@@ -41,11 +41,12 @@ figure {
   min-height: 10rem;
   background: linear-gradient(248deg, #eeaeca -16%, #94bbe9 134%);
   @include breakpoint(md) {
-    margin-top: 8rem;
+    margin-top: 2.4rem;
     padding: 8rem 0;
     width: grid-width(10);
   }
   @include breakpoint(mdl) {
+    margin-top: 4rem;
     padding: 12rem 0;
   }
 }
@@ -61,7 +62,11 @@ article {
   margin: 0 auto;
   text-align: center;
   @include breakpoint(md) {
-    padding-top: 11.2rem;
+    padding-top: 2.4rem;
+    width: grid-width(8.4);
+  }
+  @include breakpoint(mdl) {
+    padding-top: 6.4rem;
     width: grid-width(8.4);
   }
 }
@@ -69,6 +74,11 @@ article {
 h4 {
   font-size: 3.2rem;
   @include breakpoint(md) {
+    padding-bottom: 1.6rem;
+    font-size: 5.6vw;
+  }
+  @include breakpoint(mdl) {
+    padding-bottom: 0;
     font-size: 3.8vw;
   }
 }

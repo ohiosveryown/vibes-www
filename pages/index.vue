@@ -31,6 +31,22 @@ export default {
     title: "home",
   }),
   components: { Hero, ProductPreview, SectionToolbox, SectionDarkMode, Footer },
-  mounted() {},
+  mounted() {
+    gsap.from(".enter", {
+      opacity: 0,
+      y: 200,
+      stagger: 0.075,
+      duration: 1,
+      delay: 1,
+      ease: Power2.easeInOut,
+    });
+
+    gsap.from(".rainbow-enter", {
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+      ease: Power2.easeInOut,
+    });
+  },
 };
 </script>

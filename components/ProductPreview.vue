@@ -2,6 +2,7 @@
 <template>
   <section>
     <video
+      class="enter"
       preload="metadata"
       playsinline=""
       muted
@@ -67,7 +68,7 @@
 
     <div class="bg">
       <img
-        class="rainbow"
+        class="rainbow rainbow-enter"
         src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612318145/vibes-www/bg_fze1pg.jpg"
         alt="document background"
       />
@@ -102,6 +103,9 @@ video,
   box-shadow: 0px 20px 68px rgba(0, 0, 0, 0.32);
   @include breakpoint(md) {
     margin: 0 auto;
+    width: grid-width(10);
+  }
+  @include breakpoint(mdl) {
     width: grid-width(8);
   }
 }
@@ -229,7 +233,7 @@ article {
   text-align: center;
   @include breakpoint(md) {
     padding-bottom: 4rem;
-    width: grid-width(8);
+    width: grid-width(10);
   }
   @include breakpoint(mdl) {
     width: grid-width(6);
@@ -240,6 +244,10 @@ h3 {
   font-size: 8.4vw;
   line-height: 1.2;
   @include breakpoint(md) {
+    font-size: 6.4vw;
+    line-height: 1.1;
+  }
+  @include breakpoint(mdl) {
     font-size: 4.4vw;
     line-height: 1.1;
   }
@@ -262,10 +270,14 @@ export default {
   mounted() {
     const getBubbles = document.querySelector(".bubbles");
     const media = () => {
-      const mq = matchMedia("(min-width: 700px)");
-      if (mq.matches) {
-        getBubbles.style.padding = "4rem 0 12rem";
+      const md = matchMedia("(min-width: 700px)");
+      const mdl = matchMedia("(min-width: 800px)");
+      if (md.matches) {
+        // ≥ md
+        // getBubbles.style.margin = "-6.4rem 0";
+        getBubbles.style.padding = "4rem 0";
       } else {
+        // < md
         getBubbles.style.padding = "6.4rem 0";
       }
     };

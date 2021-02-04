@@ -1,6 +1,6 @@
 <!-- layout -->
 <template>
-  <header class="width">
+  <header class="enter width">
     <Icon class="icon" />
     <h1 class="mb-2 font-prim">{{ header }}</h1>
     <h2 class="for-sm font-body">{{ subheadSm }}</h2>
@@ -19,6 +19,10 @@ header {
   justify-content: center;
   margin: 0 auto 4rem;
   @include breakpoint(md) {
+    margin-bottom: 4.8rem;
+  }
+
+  @include breakpoint(mdl) {
     margin-bottom: 8rem;
   }
 
@@ -37,6 +41,9 @@ header {
     font-size: 6rem;
     line-height: 1.1;
     @include breakpoint(md) {
+      font-size: 8.8vw;
+    }
+    @include breakpoint(mdl) {
       font-size: 7.2vw;
     }
   }
@@ -44,24 +51,26 @@ header {
     margin-top: 1.2rem;
     margin: 1.2rem 0 4.8rem;
     font-size: 1.9rem;
-    @include breakpoint(mdl) {
-      margin-top: 0;
-      margin: 0 0 6.4rem;
+    @include breakpoint(md) {
+      margin: 0 0 4.8rem;
       max-width: 56ch;
       font-size: 2rem;
+    }
+    @include breakpoint(mdl) {
+      margin: 0 0 6.4rem;
     }
   }
 }
 
 .for-sm {
-  @include breakpoint(md) {
+  @include breakpoint(mdl) {
     display: none;
   }
 }
 
 .for-md {
   display: none;
-  @include breakpoint(md) {
+  @include breakpoint(mdl) {
     display: inherit;
   }
 }
@@ -75,13 +84,6 @@ export default {
   components: { Icon, Form },
   props: ["header", "subheadSm", "subheadMd"],
 
-  mounted() {
-    // gsap.from('.enter', {
-    //   opacity: 0,
-    //   duration: 3,
-    //   delay: .3,
-    //   ease: "elastic.out(1,.5)"
-    // })
-  },
+  mounted() {},
 };
 </script>

@@ -77,13 +77,6 @@ export default {
   components: { Icon, Form },
   props: ["header", "subhead"],
 
-  mounted() {
-    // gsap.from('.enter', {
-    //   opacity: 0,
-    //   duration: 3,
-    //   delay: .3,
-    //   ease: "elastic.out(1,.5)"
-    // })
-  },
+  mounted() {},
 };
 </script>

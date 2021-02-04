@@ -1,6 +1,6 @@
 <!-- layout -->
 <template>
-  <section class="width pb-9">
+  <section class="width">
     <figure>
       <img
         src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612319245/vibes-www/darkmode_ktkn3b.png"
@@ -29,6 +29,13 @@
 <!-- style -->
 <style lang="scss" scoped>
 @import "~/static/style/grid.scss";
+section {
+  padding-bottom: 4.8rem;
+  @include breakpoint(md) {
+    padding-bottom: 7.2rem;
+  }
+}
+
 figure {
   margin: 4.8rem auto 4.8rem;
   padding: 1.2rem 0 0;
@@ -53,7 +60,11 @@ article {
   margin: 0 auto;
   text-align: center;
   @include breakpoint(md) {
-    padding-top: 11.2rem;
+    padding-top: 2.4rem;
+    width: grid-width(8.4);
+  }
+  @include breakpoint(mdl) {
+    padding-top: 6.4rem;
     width: grid-width(8.4);
   }
 }
@@ -61,6 +72,11 @@ article {
 h4 {
   font-size: 3.2rem;
   @include breakpoint(md) {
+    padding-bottom: 1.6rem;
+    font-size: 5.6vw;
+  }
+  @include breakpoint(mdl) {
+    padding-bottom: 0;
     font-size: 3.8vw;
   }
 }
