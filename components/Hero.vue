@@ -27,7 +27,7 @@ header {
   }
 
   @include breakpoint(lg) {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 }
 
