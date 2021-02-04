@@ -241,7 +241,7 @@ article {
 }
 
 h3 {
-  font-size: 8.4vw;
+  font-size: 10vw;
   line-height: 1.2;
   @include breakpoint(md) {
     font-size: 6.4vw;

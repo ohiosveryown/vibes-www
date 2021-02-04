@@ -39,9 +39,10 @@ header {
   }
   h1 {
     font-size: 6rem;
-    line-height: 1.1;
+    line-height: 1;
     @include breakpoint(md) {
       font-size: 8.8vw;
+      line-height: 1.1;
     }
     @include breakpoint(mdl) {
       font-size: 7.2vw;
