@@ -11,7 +11,7 @@
       <h5 class="font-sec">
         <a
           target="_blank"
-          href="https://twitter.com/cmykw_/status/1196273185987211264"
+          href="https://twitter.com/cmykw_/status/1354959164536188934"
           >Follow Updates on Twitter</a
         >
       </h5>
