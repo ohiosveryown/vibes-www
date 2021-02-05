@@ -2,7 +2,7 @@
 <template>
   <div class="app">
     <header>
-      <div class="bubbles">
+      <div class="bubbles enter">
         <figure>
           <img
             class="bubble bubble-01"
@@ -52,12 +52,14 @@
         </figure>
       </div>
 
-      <h1 class="font-prim">Good vibes will be coming your way soon.</h1>
-      <h2>
+      <h1 class="width enter font-prim">
+        Good vibes will be coming your way soon.
+      </h1>
+      <h2 class="width enter">
         Thanks for signing up. You'll be the first to know when Vibes has been
         opened up for use ✨🔮.
       </h2>
-      <Icon class="icon" />
+      <Icon class="icon enter" />
       <h3 class="font-sec">
         <a
           target="_blank"
@@ -69,7 +71,7 @@
     <img
       src="https://res.cloudinary.com/da32ufmnf/image/upload/v1612319533/vibes-www/bg-footer_mbxpa9.jpg"
       alt=""
-      class="bg"
+      class="bg rainbow-enter"
     />
   </div>
 </template>
@@ -82,7 +84,7 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 0 auto 4rem;
+  margin: 0 auto;
   min-height: 100vh;
   overflow-x: hidden;
   @include breakpoint(md) {
@@ -99,11 +101,11 @@ h2 {
   text-align: center;
 }
 h1 {
-  margin-bottom: 1.2rem;
-  font-size: 4rem;
+  margin: 14rem 0 1.2rem;
+  font-size: 3.6rem;
   line-height: 1;
   @include breakpoint(md) {
-    margin-bottom: 2rem;
+    margin: 18rem 0 2rem;
     width: grid-width(10);
     font-size: 8.8vw;
   }
@@ -120,6 +122,7 @@ h2 {
   @include breakpoint(md) {
     margin: 0 0 4.8rem;
     max-width: 56ch;
+    width: grid-width(8);
     font-size: 2rem;
   }
   @include breakpoint(mdl) {
@@ -129,8 +132,11 @@ h2 {
 }
 
 h3 {
-  margin-top: 6.4rem;
+  margin-top: 4rem;
   font-size: 1.4rem;
+  @include breakpoint(md) {
+    margin-top: 6.4rem;
+  }
 }
 
 .bubbles {
@@ -139,11 +145,13 @@ h3 {
   align-items: center;
   position: absolute;
   z-index: var(--zmin);
-  top: -20rem;
+  top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
   pointer-events: none;
+  @include breakpoint(md) {
+    top: -20rem;
+  }
 }
 
 figure:nth-of-type(1) {
@@ -224,9 +232,12 @@ figure:nth-of-type(6) {
 .bg {
   position: absolute;
   z-index: var(--zmin);
-  bottom: -11.2rem;
+  bottom: 0rem;
   width: 100vw;
   mix-blend-mode: multiply;
+  @include breakpoint(md) {
+    bottom: -11.2rem;
+  }
 }
 </style>
 
@@ -239,6 +250,22 @@ export default {
   }),
   components: { Icon },
   mounted() {
+    gsap.from(".enter", {
+      opacity: 0,
+      y: 200,
+      stagger: 0.075,
+      duration: 1,
+      delay: 1,
+      ease: Power2.easeInOut,
+    });
+
+    gsap.from(".rainbow-enter", {
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+      ease: Power2.easeInOut,
+    });
+
     const random = (min, max) => {
       const delta = max - min;
       return (direction = 1) => (min + delta * Math.random()) * direction;
