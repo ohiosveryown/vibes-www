@@ -60,7 +60,7 @@
         opened up for use ✨🔮.
       </h2>
       <Icon class="icon enter" />
-      <h3 class="font-sec">
+      <h3 class="font-sec enter">
         <a
           target="_blank"
           href="https://twitter.com/cmykw_/status/1196273185987211264"
@@ -232,7 +232,7 @@ figure:nth-of-type(6) {
 .bg {
   position: absolute;
   z-index: var(--zmin);
-  bottom: 0rem;
+  bottom: -6.4rem;
   width: 100vw;
   mix-blend-mode: multiply;
   @include breakpoint(md) {
