@@ -2,19 +2,20 @@
 <template>
   <section class="width">
     <figure>
-      <video
+      <img src="https://res.cloudinary.com/da32ufmnf/image/upload/v1614713882/vibes-www/toolbox_2x_m6oq9q.png" alt="toolbox search and filter">
+      <!-- <video
         preload="metadata"
         playsinline=""
         muted
         loop="loop"
         controls="true"
-        poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1612194736/vibes-www/cover_snmq67.jpg"
+        poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1614713255/vibes-www/toolbox-poster_2x_kmgsmo.jpg"
       >
         <source
-          src="https://res.cloudinary.com/da32ufmnf/video/upload/v1612283673/vibes-www/v_mfq0fo.mp4"
+          src="https://res.cloudinary.com/da32ufmnf/video/upload/v1614713257/vibes-www/toolbox_pwxtkw.mp4"
         />
         <source />
-      </video>
+      </video> -->
     </figure>
 
     <article class="pb-0">
@@ -37,15 +38,15 @@ figure {
   padding: 4.8rem 0;
   min-height: 10rem;
   background: linear-gradient(248deg, #eeaeca -16%, #94bbe9 134%);
+  overflow: ￼;
   @include breakpoint(md) {
     margin-top: 2.4rem;
-    padding: 8rem 0;
+    padding: 8rem 0 6rem;
     width: grid-width(10);
   }
-  @include breakpoint(mdl) {
-    margin-top: 4rem;
-    padding: 12rem 0;
-  }
+  // @include breakpoint(mdl) {
+  //   padding: 8rem 0 6rem;
+  // }
 }
 
 video {
