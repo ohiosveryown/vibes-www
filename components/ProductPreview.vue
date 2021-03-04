@@ -8,10 +8,10 @@
       muted
       loop="loop"
       controls="true"
-      poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1612194736/vibes-www/cover_snmq67.jpg"
+      poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1614836573/vibes-www/poster_2x_w1tr8x.jpg"
     >
       <source
-        src="https://res.cloudinary.com/da32ufmnf/video/upload/v1614798410/vibes-www/resto_shfvcy.mp4#t=0.5"
+        src="https://res.cloudinary.com/da32ufmnf/video/upload/v1614836352/vibes-www/004_k3ijht.mp4"
       />
       <source />
     </video>
