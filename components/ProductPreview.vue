@@ -8,7 +8,7 @@
       muted
       loop="loop"
       controls="true"
-      poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1614836573/vibes-www/poster_2x_w1tr8x.jpg"
+      poster="https://res.cloudinary.com/da32ufmnf/image/upload/v1614876259/vibes-www/poster_vbxbzi.jpg"
     >
       <source
         src="https://res.cloudinary.com/da32ufmnf/video/upload/v1614836352/vibes-www/004_k3ijht.mp4"
