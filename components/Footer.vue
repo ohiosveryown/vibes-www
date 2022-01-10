@@ -6,7 +6,7 @@
       <Form class="mt-4 mb-4" />
       <p class="mb-3 tac font-body">
         Sign up to get notified when Vibes is ready for release; currently
-        estimating for the first quarter of 2021.
+        estimating for the first quarter of 2022.
       </p>
       <h5 class="font-sec">
         <a
